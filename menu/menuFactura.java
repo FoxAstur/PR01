@@ -1,5 +1,6 @@
 package menu;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -146,12 +147,20 @@ public class menuFactura implements crud {
 		
 		keyboard.reset();
 		Date fecha = null;
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		
 		System.out.println("Dime la fecha de Factura");
 		String nuevaFechaFactura = keyboard.nextLine();
-		fecha.parse(sdf.format(nuevaFechaFactura));
+		
+		try {
+			fecha = sdf.parse(nuevaFechaFactura);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		fac.setFecha(fecha);
+		System.out.println("Dime el ID del cliente de la Factura");
 		int nuevoIdCliente = Integer.parseInt(keyboard.nextLine());
 		fac.setId_cliente(nuevoIdCliente);
 		System.out.println("Dime la Serie de la Factura");

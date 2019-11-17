@@ -35,6 +35,7 @@ public abstract class menuPrincipal {
 			break;
 		case 3:
 			System.out.println("Has elegido Facturas");
+			menuFactura.mostrarFactura();
 	
 			break;
 		case 4:
