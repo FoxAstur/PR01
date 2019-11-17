@@ -97,7 +97,7 @@ public class menuFactura implements crud {
 		
 		
 		Date fecha = null;
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		String eleccion;
 		
 		System.out.println("Dime la posicion del Articulo que quieres Modificar");
@@ -109,7 +109,12 @@ public class menuFactura implements crud {
 		
 		System.out.println("Dime la fecha de Factura");
 		String nuevaFechaFactura = keyboard.nextLine();
-		fecha.parse(sdf.format(nuevaFechaFactura));
+		try {
+			fecha = sdf.parse(nuevaFechaFactura);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		fac.setFecha(fecha);
 		System.out.println("Dime el ID del cliente");
 		int nuevoIdCliente = Integer.parseInt(keyboard.nextLine());
@@ -147,7 +152,7 @@ public class menuFactura implements crud {
 		
 		keyboard.reset();
 		Date fecha = null;
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
 		
 		System.out.println("Dime la fecha de Factura");
 		String nuevaFechaFactura = keyboard.nextLine();

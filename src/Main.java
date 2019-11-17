@@ -1,10 +1,13 @@
 package src; 
 import java.util.ArrayList;
+import java.util.Date;
+
 import menu.menuPrincipal;
 import java.util.List;
 
 import src.models.Categoria;
 import src.models.Clientes;
+import src.models.Factura;
 import src.models.Producto;
 import src.models.comun.DbObject;
 import src.models.comun.Tools; 
@@ -47,9 +50,16 @@ public class Main extends menuPrincipal {
 			//cli.setNombre("Juanjose");
 			//cli.setTelefono("985115858");
 			//cli.save();
-			
-			
-		 iniciaMenu();
+		
+		//Factura fac = new Factura();
+		//Date fecha = null;
+		
+		//fac.setFecha(fecha);
+		//fac.setSerie(02);
+		//fac.setId_cliente(03);
+		//fac.save();
+		
+		menuPrincipal.iniciaMenu();
 		 
 		 
 	}
