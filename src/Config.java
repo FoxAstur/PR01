@@ -18,8 +18,4 @@ public class Config {
 	
  
 	private Config() {};
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> branch 'master' of https://github.com/FoxAstur/DAM-PR01.git

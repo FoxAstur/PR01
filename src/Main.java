@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package src; 
 import java.util.ArrayList;
 import menu.menuPrincipal;
@@ -55,36 +54,3 @@ public class Main extends menuPrincipal {
 		 
 	}
 }
-=======
-package src;
-import java.sql.Connection; 
-
-import src.models.Categoria;
-import src.models.comun.DbSqlite;
-
-public class Main {
-
-	public static void main(String[] args) {
-		
-		// Hacer el Backup del día
-		Backup.getInstance().doBackup();
-		
-		// Comprobar que la base de datos existe
-		DbSqlite db = DbSqlite.getInstance();
-		Connection con = db.getConnection();
-		
-		// Arrancar
-		
-		 
-		Categoria.saveDb(con, "Categoria 02");
-		
-		menuPrincipal.iniciaMenu();
-		
-		//statemnt.executeQuery(sql);
-		
-		//con.prepareStatement(sql)
-	 
-	}
-
-}
->>>>>>> branch 'master' of https://github.com/FoxAstur/DAM-PR01.git

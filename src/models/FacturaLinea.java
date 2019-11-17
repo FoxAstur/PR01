@@ -1,6 +1,5 @@
 package src.models;
 
-<<<<<<< HEAD
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
@@ -90,48 +89,5 @@ public class FacturaLinea extends DbObject {
 	public String toString() {
 		return this.getValues();
 	}
-=======
-import java.util.Date;
-
-public class FacturaLinea {
-
-	private Integer id;
-	private Date created;
-	private Integer id_factura;
-	private String nombre;
-	private Integer precio; // 100 = 1,00
-	
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	public Date getCreated() {
-		return created;
-	}
-	public void setCreated(Date created) {
-		this.created = created;
-	}
-	public Integer getId_factura() {
-		return id_factura;
-	}
-	public void setId_factura(Integer id_factura) {
-		this.id_factura = id_factura;
-	}
-	public String getNombre() {
-		return nombre;
-	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	public Integer getPrecio() {
-		return precio;
-	}
-	public void setPrecio(Integer precio) {
-		this.precio = precio;
-	}
-	
->>>>>>> branch 'master' of https://github.com/FoxAstur/DAM-PR01.git
 	
 }

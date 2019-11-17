@@ -28,8 +28,6 @@ public abstract class menuPrincipal {
 		case 1:
 			System.out.println("Has elegido Categorias");
 			menuCategorias.mostrarCategorias();
-			
-			
 			break;
 		case 2:
 			System.out.println("Has elegido Clientes");
@@ -37,6 +35,7 @@ public abstract class menuPrincipal {
 			break;
 		case 3:
 			System.out.println("Has elegido Facturas");
+	
 			break;
 		case 4:
 			System.out.println("Has elegido Factura Linea");
