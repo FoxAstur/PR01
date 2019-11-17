@@ -1,0 +1,29 @@
+- Tienda (TPV = Terminal Punto Venta)
+=> Clientes -> Si, pero.
+- Usuario - Factura
+	=> nombre
+	=> dni
+	=> direccion
+<<<<<<< HEAD
+	=> phone
+	=> email
+- Cliente Contado - Ticket => ID_Ticket
+=> Inventario
+- Categorias -> Producto->MN->Categorias
+- Productos -> Stock -> Entradas y Salidas
+=> Facturas
+- ID_Ticket || ID_Factura
+- [] Lineas_factura
+=> Pasarela de Pago - (Simulada)
+=======
+	=> telefono
+	=> email
+- Cliente Contado - Ticket => ID_Ticket
+=> Inventario
+- Categorias -> Producto->MN->Categorias
+- Productos -> Stock -> Entradas y Salidas
+=> Facturas
+- ID_Ticket || ID_Factura
+- [] Lineas_factura
+=> Pasarela de Pago - Simulada
+>>>>>>> branch 'master' of https://github.com/FoxAstur/DAM-PR01.git

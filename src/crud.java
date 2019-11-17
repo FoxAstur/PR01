@@ -1,0 +1,11 @@
+package src;
+
+public interface crud {
+	
+	public void ver();
+	public void modificar();
+	public void borrar();
+	public void crear();
+
+}
+//config y dbsqlite
