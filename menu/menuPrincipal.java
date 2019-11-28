@@ -43,6 +43,7 @@ public abstract class menuPrincipal {
 			break;
 		case 5:
 			System.out.println("Has elegido Producto");
+			menuProducto.mostrarProducto();
 			break;
 		case 6:
 			System.out.println("Has elegido Salir");

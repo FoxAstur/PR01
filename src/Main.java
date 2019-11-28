@@ -59,6 +59,14 @@ public class Main extends menuPrincipal {
 		//fac.setId_cliente(03);
 		//fac.save();
 		
+		//Producto pro = new Producto();
+		//pro.setId_categoria(01);
+		//pro.setNombre("Queso");
+		//pro.setPrecio(200);
+		//pro.setStock(16);
+		//pro.save();
+		
+		
 		menuPrincipal.iniciaMenu();
 		 
 		 

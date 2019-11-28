@@ -78,9 +78,9 @@ public class menuProducto implements crud {
 			
 		productosLista = pro.list();
 		
-		for(int i = 0 ; i < categoriasLista.size(); i++) {
+		for(int i = 0 ; i < productosLista.size(); i++) {
 			
-			System.out.println(i+" = "+ categoriasLista.get(i));
+			System.out.println(i+" = "+ productosLista.get(i));
 			
 			
 
@@ -96,8 +96,8 @@ public class menuProducto implements crud {
 		String eleccion;
 		eleccion = keyboard.nextLine();
 		int opcion = Integer.parseInt(eleccion);
-		categoriasLista.get(opcion);
-		int id = categoriasLista.get(opcion).getId();
+		productosLista.get(opcion);
+		int id = productosLista.get(opcion).getId();
 		
 		System.out.println("Dime El nuevo nombre de la Categoria");
 		keyboard.reset();
