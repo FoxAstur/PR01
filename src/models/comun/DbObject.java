@@ -2,6 +2,8 @@ package src.models.comun;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public abstract class DbObject {
@@ -82,7 +84,12 @@ public abstract class DbObject {
 		if (isNullOrEmpty(value)) {
 			return data;
 		}
-
+		if (value.getClass().equals(new Date().getClass())){
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+			sdf.format(value);
+			return "'" + sdf.format(value) + "'";
+		}
+		
 		if (data == null || data.isEmpty()) {
 			return "'" + value + "'";
 		}

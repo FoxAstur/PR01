@@ -99,6 +99,7 @@ public class menuFactura implements crud {
 		Date fecha = null;
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		String eleccion;
+		sdf.setLenient(false);
 		
 		System.out.println("Dime la posicion del Articulo que quieres Modificar");
 		eleccion = keyboard.nextLine();
@@ -152,10 +153,12 @@ public class menuFactura implements crud {
 		
 		keyboard.reset();
 		Date fecha = null;
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+		sdf.setLenient(false);
 		
 		System.out.println("Dime la fecha de Factura");
 		String nuevaFechaFactura = keyboard.nextLine();
+		
 		
 		try {
 			fecha = sdf.parse(nuevaFechaFactura);
