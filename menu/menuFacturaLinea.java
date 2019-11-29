@@ -1,9 +1,8 @@
 package menu;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+
+
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 import src.models.FacturaLinea;
@@ -80,7 +79,7 @@ public class menuFacturaLinea implements crud{
 	@Override
 	public  void ver() {
 		
-		if(!facturaLineaLista.isEmpty()) {
+		
 			
 		facturaLineaLista = facLin.list();
 		
@@ -91,47 +90,36 @@ public class menuFacturaLinea implements crud{
 			menuFacturaLinea.mostrarFacturaLinea();
 		}
 
-	}else {
-		System.out.println("Esta categoria esta vacia");
-		menuFacturaLinea.mostrarFacturaLinea();
+	
 	}
-	}
+	
 	
 
 	@Override
 	public void modificar() {
 
 		
-		
-		Date fecha = null;
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		String eleccion;
-		sdf.setLenient(false);
+	
 		
 		System.out.println("Dime la posicion del Articulo que quieres Modificar");
 		eleccion = keyboard.nextLine();
 		int opcion = Integer.parseInt(eleccion);
-		facturaLista.get(opcion);
-		int id =facturaLista.get(opcion).getId();	
-		fac= (Factura) fac.getByid(id);
+		facturaLineaLista.get(opcion);
+		int id =facturaLineaLista.get(opcion).getId();	
+		facLin= (FacturaLinea) facLin.getByid(id);
 		
-		System.out.println("Dime la fecha de Factura");
-		String nuevaFechaFactura = keyboard.nextLine();
-		try {
-			fecha = sdf.parse(nuevaFechaFactura);
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		fac.setFecha(fecha);
-		System.out.println("Dime el ID del cliente");
-		int nuevoIdCliente = Integer.parseInt(keyboard.nextLine());
-		fac.setId_cliente(nuevoIdCliente);
-		System.out.println("Dime la Serie de la Factura");
-		int nuevaSerieCliente = Integer.parseInt(keyboard.nextLine());
-		fac.setSerie(nuevaSerieCliente);
-	
-		fac.save();
+		System.out.println("Dime el nuevo nombre de la factura en linea");
+		String nuevoNombre = keyboard.nextLine();
+		facLin.setNombre(nuevoNombre);
+		System.out.println("Dime el nuevo ID de la factura en linea");
+		int nuevoIdFactura = Integer.parseInt(keyboard.nextLine());
+		facLin.setId_factura(nuevoIdFactura);
+		System.out.println("Dime el nuevo Precio de la Factura en linea");
+		int nuevoPrecio = Integer.parseInt(keyboard.nextLine());
+		facLin.setPrecio(nuevoPrecio);
+		facLin.save();
+		
 		
 
 		menuFacturaLinea.mostrarFacturaLinea();
@@ -178,7 +166,7 @@ public class menuFacturaLinea implements crud{
 		
 		
 		
-		System.out.println("Se ha insertado el nuevo cliente");
+		System.out.println("Se ha insertado la nueva Factura en Linea");
 		
 		menuFacturaLinea.mostrarFacturaLinea();
 
