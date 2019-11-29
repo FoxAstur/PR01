@@ -33,7 +33,8 @@ public class menuFactura implements crud {
 		
 		
 		int opcion;
-		System.out.print("Elige una opcion\n");
+		
+		System.out.print("\n Elige una opcion sobre Facturas \n");
 		
 		
 		System.out.print("1 para Ver\n");
@@ -86,7 +87,7 @@ public class menuFactura implements crud {
 			
 			System.out.println(i+" = "+ facturaLista.get(i));
 			
-			
+			menuFactura.mostrarFactura();
 
 	}
 	}
@@ -127,7 +128,7 @@ public class menuFactura implements crud {
 		fac.save();
 		
 
-		
+		menuFactura.mostrarFactura();
 		
 	}
 
@@ -142,7 +143,7 @@ public class menuFactura implements crud {
 		
 		 
 		facturaLista.get(opcion).delete();
-	
+		menuFactura.mostrarFactura();
 		
 	}
 
@@ -181,7 +182,7 @@ public class menuFactura implements crud {
 		
 		System.out.println("Se ha insertado el nuevo cliente");
 		
-		
+		menuFactura.mostrarFactura();
 		
 		
 	}

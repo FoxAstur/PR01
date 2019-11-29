@@ -10,7 +10,7 @@ public abstract class menuPrincipal {
 		boolean salida = true;
 		
 		int opcion;
-		System.out.print("Elige una opcion\n");
+		System.out.print("\n Elige una opcion\n");
 		Scanner keyboard = new Scanner(System.in);
 		
 		System.out.print("1 para Categorias\n");

@@ -29,7 +29,7 @@ public class menuClientes implements crud {
 		
 		
 		int opcion;
-		System.out.print("Elige una opcion\n");
+		System.out.print("\n Elige una opcion Sobre Clientes\n");
 		
 		
 		System.out.print("1 para Ver\n");
@@ -82,7 +82,7 @@ public class menuClientes implements crud {
 			
 			System.out.println(i+" = "+ clientesLista.get(i));
 			
-			
+			menuClientes.mostrarClientes();
 
 	}
 	}
@@ -120,7 +120,8 @@ public class menuClientes implements crud {
 		
 			
 		
-		
+		menuClientes.mostrarClientes();
+
 		
 	}
 
@@ -136,7 +137,8 @@ public class menuClientes implements crud {
 		 
 		clientesLista.get(opcion).delete();
 	
-		
+		menuClientes.mostrarClientes();
+
 	}
 
 	@Override
@@ -166,7 +168,8 @@ public class menuClientes implements crud {
 		System.out.println("Se ha insertado el nuevo cliente");
 		
 		
-		
+		menuClientes.mostrarClientes();
+
 		
 	}
 }

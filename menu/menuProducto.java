@@ -29,7 +29,7 @@ public class menuProducto implements crud {
 		
 		
 		int opcion;
-		System.out.print("Elige una opcion\n");
+		System.out.print("\n Elige una opcion sobre Productos\n");
 		
 		
 		System.out.print("1 para Ver\n");
@@ -82,7 +82,7 @@ public class menuProducto implements crud {
 			
 			System.out.println(i+" = "+ productosLista.get(i));
 			
-			
+			menuProducto.mostrarProducto();
 
 	}
 	}
@@ -90,7 +90,7 @@ public class menuProducto implements crud {
 	@Override
 	public void modificar() {
 		
-		System.out.println("Dime la posicion de la Categoria que quieres Modificar");
+		System.out.println("Dime la posicion del Producto que quieres Modificar");
 		keyboard.reset();
 		
 		String eleccion;
@@ -99,15 +99,27 @@ public class menuProducto implements crud {
 		productosLista.get(opcion);
 		int id = productosLista.get(opcion).getId();
 		
-		System.out.println("Dime El nuevo nombre de la Categoria");
+		System.out.println("Dime El nuevo nombre de Producto");
 		keyboard.reset();
 		String nuevoNombre = keyboard.nextLine();
 		
-		cat= (Categoria) cat.getByid(id);
-		cat.setNombre(nuevoNombre);
-		cat.save();
+		pro= (Producto) pro.getByid(id);
+		pro.setNombre(nuevoNombre);
 		
 		
+		System.out.println("Dime el Precio del nuevo Producto");
+		
+		int precioProducto = Integer.parseInt(keyboard.nextLine());
+		pro.setPrecio(precioProducto);
+		
+		System.out.println("Dime el Stock del nuevo Producto");
+		
+		int stockProducto = Integer.parseInt(keyboard.nextLine());
+		pro.setId_categoria(stockProducto);
+		
+		pro.save();
+		
+		menuProducto.mostrarProducto();
 	}
 
 	@Override
@@ -115,32 +127,57 @@ public class menuProducto implements crud {
 		keyboard.reset();
 		
 		String eleccion;
-		System.out.println("Dime la posicion de la Categoria que quieres Borrar");
+		System.out.println("Dime la posicion del Producto que quieres Borrar");
 		eleccion = keyboard.nextLine();
 		int opcion = Integer.parseInt(eleccion);
 		
 		 
-		 categoriasLista.get(opcion).delete();
+		 productosLista.get(opcion).delete();
 	
-		
+			menuProducto.mostrarProducto();
 	}
 
 	@Override
 	public void crear() {
 		
-		System.out.println("Dime el nombre del la nueva categoria");
 		
 		keyboard.reset();
-		
-		String nuevaCat = keyboard.nextLine();
-		
-		
-		cat.setNombre(nuevaCat);
-		cat.save();
+		System.out.println("Dime el nombre del la nueva categoria");
 		
 		
-		System.out.println("Se ha insertado la nueva Categoria");
+		String nuevoPro = keyboard.nextLine();
+		pro.setNombre(nuevoPro);
 		
+		System.out.println("Dime el ID del nuevo Producto");
+		
+		int idProducto = Integer.parseInt(keyboard.nextLine());
+		pro.setId_categoria(idProducto);
+		
+		pro.setNombre(nuevoPro);
+		
+		
+		System.out.println("Dime el Precio del nuevo Producto");
+		
+		int precioProducto = Integer.parseInt(keyboard.nextLine());
+		pro.setPrecio(precioProducto);
+		
+		System.out.println("Dime el Stock del nuevo Producto");
+		
+		int stockProducto = Integer.parseInt(keyboard.nextLine());
+		pro.setId_categoria(stockProducto);
+		
+		
+		System.out.println("Se ha insertado el nuevo Producto");
+		
+		pro.save();
+		
+		menuProducto.mostrarProducto();
+		//Producto pro = new Producto();
+				//pro.setId_categoria(01);
+				//pro.setNombre("Queso");
+				//pro.setPrecio(200);
+				//pro.setStock(16);
+				//pro.save();
 		
 		
 		

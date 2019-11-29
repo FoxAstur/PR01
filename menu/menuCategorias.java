@@ -29,7 +29,7 @@ public class menuCategorias implements crud {
 		
 		
 		int opcion;
-		System.out.print("Elige una opcion\n");
+		System.out.print("Elige una opcion sobre categorias\n");
 		
 		
 		System.out.print("1 para Ver\n");
@@ -83,14 +83,15 @@ public class menuCategorias implements crud {
 			System.out.println(i+" = "+ categoriasLista.get(i));
 			
 			
-
+			menuCategorias.mostrarCategorias();
+			
 	}
 	}
 
 	@Override
 	public void modificar() {
 		
-		System.out.println("Dime la posicion de la Categoria que quieres Modificar");
+		System.out.println("\n Dime la posicion de la Categoria que quieres Modificar");
 		keyboard.reset();
 		
 		String eleccion;
@@ -107,7 +108,8 @@ public class menuCategorias implements crud {
 		cat.setNombre(nuevoNombre);
 		cat.save();
 		
-		
+		menuCategorias.mostrarCategorias();
+
 	}
 
 	@Override
@@ -122,7 +124,8 @@ public class menuCategorias implements crud {
 		 
 		 categoriasLista.get(opcion).delete();
 	
-		
+			menuCategorias.mostrarCategorias();
+
 	}
 
 	@Override
@@ -142,7 +145,8 @@ public class menuCategorias implements crud {
 		System.out.println("Se ha insertado la nueva Categoria");
 		
 		
-		
+		menuCategorias.mostrarCategorias();
+
 		
 	}
 }
