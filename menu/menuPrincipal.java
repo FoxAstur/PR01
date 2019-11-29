@@ -40,6 +40,7 @@ public abstract class menuPrincipal {
 			break;
 		case 4:
 			System.out.println("Has elegido Factura Linea");
+			menuFacturaLinea.mostrarFacturaLinea();
 			break;
 		case 5:
 			System.out.println("Has elegido Producto");

@@ -8,6 +8,7 @@ import java.util.List;
 import src.models.Categoria;
 import src.models.Clientes;
 import src.models.Factura;
+import src.models.FacturaLinea;
 import src.models.Producto;
 import src.models.comun.DbObject;
 import src.models.comun.Tools; 
@@ -65,6 +66,13 @@ public class Main extends menuPrincipal {
 		//pro.setPrecio(200);
 		//pro.setStock(16);
 		//pro.save();
+		
+		
+		FacturaLinea faclin = new FacturaLinea();
+		faclin.setId_factura(15);
+		faclin.setNombre("compra plantas");
+		faclin.setPrecio(500);
+		
 		
 		
 		menuPrincipal.iniciaMenu();
