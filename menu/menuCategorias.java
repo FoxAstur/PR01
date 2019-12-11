@@ -9,7 +9,7 @@ import src.models.comun.DbObject;
 public class menuCategorias implements crud {
 	
 	
-	List<DbObject>	categoriasLista = new ArrayList<>();
+	List<DbObject>	categoriasLista = new ArrayList();
 	Categoria cat = new Categoria();
 	public static Scanner keyboard = new Scanner(System.in);
 	

@@ -68,10 +68,10 @@ public class Main extends menuPrincipal {
 		//pro.save();
 		
 		
-		FacturaLinea faclin = new FacturaLinea();
-		faclin.setId_factura(15);
-		faclin.setNombre("compra plantas");
-		faclin.setPrecio(500);
+//		FacturaLinea faclin = new FacturaLinea();
+//		faclin.setId_factura(15);
+//		faclin.setNombre("compra plantas");
+//		faclin.setPrecio(500);
 		
 		
 		

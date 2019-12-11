@@ -9,7 +9,7 @@ import src.models.Clientes;
 import src.models.comun.DbObject;
 
 public class menuClientes implements crud {
-	List<DbObject>	clientesLista = new ArrayList<>();
+	List<DbObject>	clientesLista = new ArrayList();
 	Clientes cli = new Clientes();
 	public static Scanner keyboard = new Scanner(System.in);
 	

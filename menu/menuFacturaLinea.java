@@ -11,7 +11,7 @@ import src.models.comun.DbObject;
 public class menuFacturaLinea implements crud{
 
 	
-	List<DbObject>	facturaLineaLista = new ArrayList<>();
+	List<DbObject>	facturaLineaLista = new ArrayList();
 	FacturaLinea facLin = new FacturaLinea();
 	public static Scanner keyboard = new Scanner(System.in);
 	
